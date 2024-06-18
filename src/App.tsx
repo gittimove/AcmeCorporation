@@ -42,7 +42,7 @@ function App() {
     <>
       <EmployeeForm addEmployee={addEmployee}/>
 			<hr/>
-			<EmployeeList list={state.list} removeEmployee={removeEmployee}/>
+		<EmployeeList list={state.list} removeEmployee={removeEmployee}/>
     </>
   )
 }

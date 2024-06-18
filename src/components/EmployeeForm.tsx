@@ -5,8 +5,8 @@ interface State {
 
     firstname:string;
     lastname:string;
-    jobposition:"";
-    workingtime:"";
+    jobposition:string;
+    workingtime:string;
 }
 
 interface Props {
@@ -64,21 +64,53 @@ const EmployeeForm = (props:Props) => {
 						onChange={onChange}
 						value={state.lastname}/>
 				<br/>
-				<label htmlFor="jobposition">Job position (Front,Back,Tester,Architect )</label>
-				<input type="text"
+				<p>Job position</p>
+				<label htmlFor="jobposition">(Front-End)</label>
+				<input type="checkbox"
 						name="jobposition"
 						id="jobposition"
 						onChange={onChange}
-						value={state.jobposition}/>
+						value={"Front"}/>
 				<br/>
-				<label htmlFor="workingtime">Working time (Full, Part)</label>
-				<input type="text"
+				<label htmlFor="jobposition"> (Back-End)</label>
+				<input type="checkbox"
+						name="jobposition"
+						id="jobposition"
+						onChange={onChange}
+						value={"Back"}/>
+				<br/>
+				<label htmlFor="jobposition"> (Testing)</label>
+				<input type="checkbox"
+						name="jobposition"
+						id="jobposition"
+						onChange={onChange}
+						value={"Testing"}/> 
+				<br/>
+				<label htmlFor="jobposition">(System Architect)</label>
+				<input type="checkbox"
+						name="jobposition"
+						id="jobposition"
+						onChange={onChange}
+						value={"Architect"}/>
+				<br/>
+				<br/>
+				<label htmlFor="workingtime">Working time (Full)</label>
+				<input type="checkbox"
 						name="workingtime"
 						id="workingtime"
 						onChange={onChange}
-						value={state.workingtime}/>
+						value={"Full"}/>
+				<br/>
+				<label htmlFor="workingtime">Working time (Part)</label>
+				<input type="checkbox"
+						name="workingtime"
+						id="workingtime"
+						onChange={onChange}
+						value={"Part"}/>
 				<br/>
 				<input type="submit" value="Add Employee"/>
+				<input type="reset" value="Reset choices"/>
+				<br/>
 			</form>
 		</div>
 	)
